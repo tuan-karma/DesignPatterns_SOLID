@@ -9,5 +9,5 @@
 
 ## How 
 Các bước 
-1. Tìm lọc tài liệu phù hợp với trình độ cá nhân: đã biết lập trình trên TS, C/C++, Python. Đã có kinh nghiệm viết phần mềm dự án. Có nhu cầu nâng cao trìn độ do nhu cầu mở rộng của dự án. 
+1. Tìm lọc tài liệu phù hợp với trình độ cá nhân: đã biết lập trình trên TS, C/C++, Python. Đã có kinh nghiệm viết phần mềm dự án. Có nhu cầu nâng cao trình độ do nhu cầu mở rộng của dự án. 
 2. Đọc --> viết ghi chú, chạy thử mã mẫu, tổ chức và giải thích ví dụ vào trong repo này --> lưu và chia sẻ
