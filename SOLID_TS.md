@@ -70,6 +70,8 @@ Bây giờ chúng ta đã chia các lớp, mỗi lớp chỉ có một nhiệm v
 
 Nguyên tắc "đóng-mở" nói rằng, các thực thể phần mềm _nên_ "đóng" với việc sửa đổi, nhưng "mở" với việc mở rộng. Khái niệm thiết yếu đằng sau cách tiếp cận này là chúng ta có thể thêm chức năng mới mà không cần phải thay đổi mã hiện có.
 
+> Phát biểu: Chúng ta nên hạn chế việc chỉnh sửa bên trong một class hoặc mô-đun có sẵn, thay vào đó hãy xem xét mở rộng chúng. (Software modules should be closed for modifications but open for extensions)
+
 Xem xét mã typescript sau về các lớp/class hình học cho hình tam giác và hình chữ nhật:
 
 ```ts
