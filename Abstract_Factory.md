@@ -14,11 +14,13 @@ Hình dung bạn đang cần tạo ra một trình mô phỏng cửa hàng nội
 2. Một số biến thể của nhóm này. Ví dụ: các sản phẩm `Ghế` + `Sofa` + `Bàn cà phê` có các biến thể sau: `Modern`, `Victorian`, `ArtDeco` (~ Hiện đại, cổ điển, trang trí nghệ thuật).
 
 ![Họ các sản phẩm và biến thể của chúng](images/abstract_factory_product_families.png)
+
 _Họ các sản phẩm và biến thể của chúng._
 
 Bạn cần tìm cách tạo ra các đối tượng đồ nội thất riêng lẻ sao cho chúng ăn khớp với các đối tượng khác trong cùng một họ. Khách hàng khá tức giận nếu họ nhận được các đồ nội thất lệch họ nhau.
 
 ![Sofa kiểu hiện đại không thể nào hợp với các ghế kiểu cổ điển](images/abstract-factory-comic-1-en.png)
+
 _Sofa kiểu hiện đại không thể nào hợp với các ghế kiểu cổ điển._
 
 Ngoài ra bạn không muốn thay đổi mã chương trình đang có khi thêm sản phẩm hoặc dòng sản phẩm mới vào chương trình. Các nhà cung cấp đồ nội thất cập nhật danh mục của họ rất thường xuyên và bạn sẽ không muốn thay đổi các mã chương trình lõi mỗi khi điều đó xảy ra.
@@ -28,11 +30,13 @@ Ngoài ra bạn không muốn thay đổi mã chương trình đang có khi thê
 Điều đầu tiên mà mẫu Abstract Factory gợi ý là khai báo rõ ràng các giao diện cho từng sản phẩm riêng biệt của dòng sản phẩm (ví dụ: ghế, ghế sofa hoặc bàn cà phê). Sau đó, bạn có thể làm cho tất cả các biến thể của sản phẩm tuân theo các giao diện đó. Ví dụ: tất cả các biến thể ghế có thể triển khai giao diện `Chair`; tất cả các biến thể của bàn cà phê đều có thể triển khai giao diện `CoffeeTable`, v.v.
 
 ![Tất cả các biến thể của cùng một đối tượng phải được chuyển sang một lớp phân cấp đơn](images/Abstract_Factory_solution1.png)
+
 _Tất cả các biến thể của cùng một đối tượng phải được chuyển sang một lớp phân cấp đơn._
 
 Bước tiếp theo là khai báo Abstract Factory — một giao diện chứa một loạt các phương thức tạo tác cho tất cả các sản phẩm thuộc họ sản phẩm (ví dụ: createChair, createSofa và createCoffeeTable). Các phương thức này phải trả về các loại sản phẩm trừu tượng được đại diện bởi các giao diện mà chúng ta đã khai báo trước đó: `Chair`, `Sofa`, `CoffeeTable`, v.v.
 
 ![Mỗi nhà máy hiện hữu ứng với một biến thể sản phẩm cụ thể](images/Abstract_Factory_solution2.png)
+
 _Mỗi nhà máy hiện hữu ứng với một biến thể sản phẩm cụ thể._
 
 Thế còn các biến thể sản phẩm thì sao? Đối với mỗi biến thể của một dòng sản phẩm, chúng ta tạo một lớp nhà máy riêng dựa trên giao diện đã được định nghĩa trong AbstractFactory trước đó. Một nhà máy là một lớp trả về các sản phẩm thuộc một loại cụ thể. Ví dụ: `ModernFunitureFactory` (nhà máy đồ nội thất hiện đại) chỉ có thể tạo ra các đối tượng `ModernChair`, `ModernSofa`, và `ModernCoffeeTable`.
@@ -73,7 +77,6 @@ interface GUIFactory is
     method createButton():Button
     method createCheckbox():Checkbox
 
-
 // Concrete factories produce a family of products that belong
 // to a single variant. The factory guarantees that the
 // resulting products are compatible. Signatures of the concrete
@@ -91,7 +94,6 @@ class MacFactory implements GUIFactory is
         return new MacButton()
     method createCheckbox():Checkbox is
         return new MacCheckbox()
-
 
 // Each distinct product of a product family should have a base
 // interface. All variants of the product must implement this
@@ -123,7 +125,6 @@ class MacCheckbox implements Checkbox is
     method paint() is
         // Render a checkbox in macOS style.
 
-
 // The client code works with factories and products only
 // through abstract types: GUIFactory, Button and Checkbox. This
 // lets you pass any factory or product subclass to the client
@@ -137,7 +138,6 @@ class Application is
         this.button = factory.createButton()
     method paint() is
         button.paint()
-
 
 // The application picks the factory type depending on the
 // current configuration or environment settings and creates it
@@ -154,6 +154,7 @@ class ApplicationConfigurator is
             throw new Exception("Error! Unknown operating system.")
 
         Application app = new Application(factory)
+
 ```
 
 ## Khả năng ứng dụng
