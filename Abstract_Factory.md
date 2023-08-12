@@ -48,6 +48,7 @@ Còn một điều nữa cần làm rõ: nếu mã khách chỉ tiếp xúc vớ
 Ví dụ dưới đây minh họa cách sử dụng mẫu Abstract Factory để tạo ra các phần tử giao diện người dùng (UI) đa nền tảng mà không bị dính mắc mã khách với các lớp UI cụ thể, đồng thời giữ cho tất cả các phần tử UI tạo ra nhất quán với hệ điều hành đích.
 
 ![Ví dụ về các lớp UI đa nền tảng (vd, hệ điều hành Mac và Windows)](images/Abstract_Factory_example.png)
+
 _Ví dụ về các lớp UI đa nền tảng (vd, hệ điều hành Mac và Windows)._
 
 Các phần tử giao diện người dùng (UI) giống nhau, ví dụ nút bấm, sẽ hoạt động giống nhau, nhưng trông hơi khác nhau một chút trên các hệ điều hành khác nhau (ví dụ, phong cách Windows khác phong cách MacOS).
