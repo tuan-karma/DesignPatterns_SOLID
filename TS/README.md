@@ -50,3 +50,9 @@ Lưu ý:
 - Quy hoạch code: tôi để mã nguồn viết bằng TS trong thư mục ./src và các mã JS biên soạn ra trong thư mục ./dist. Thư mục dist được thiết lập là `"outdir": "dist"` trong file `tsconfig.json`
 - Ta viết các mã nguồn dạng file .ts trong thư mục `./src`, ví dụ "hello.ts". Sau đó dùng lệnh `npx tsc` để typescript biên dịch nó ra file `./dist/hello.js`.
 - Dùng lệnh `node dist/hello.js` để chạy file này.
+
+- Lưu ý: Nếu bạn git clone repo này thì chạy `npm install` để cài đặt tất cả các gói phần mềm liệt kê trong "package.json". Sau đó có thể chạy `npx tsc` để build ra mã js trong thư mục src, sau đó có thể chạy `npm start` (tương đương với `node dist/index.js`).
+
+## Tham khảo
+
+- https://khalilstemmler.com/blogs/typescript/node-starter-project/ (Lưu ý: một số cài đặt trong này đã outdate, nhưng tổng quan là đúng và đáng tham khảo)
