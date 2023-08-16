@@ -51,7 +51,7 @@ Lưu ý:
 - Ta viết các mã nguồn dạng file .ts trong thư mục `./src`, ví dụ "hello.ts". Sau đó dùng lệnh `npx tsc` để typescript biên dịch nó ra file `./dist/hello.js`.
 - Dùng lệnh `node dist/hello.js` để chạy file này.
 
-- Lưu ý: Nếu bạn git clone repo này thì chạy `npm install` để cài đặt tất cả các gói phần mềm liệt kê trong "package.json". Sau đó có thể chạy `npx tsc` để build ra mã js trong thư mục src, sau đó có thể chạy `npm start` (tương đương với `node dist/index.js`).
+- Lưu ý: Nếu bạn git clone repo này thì chạy `npm install` để cài đặt tất cả các gói phần mềm liệt kê trong "package.json". Sau đó có thể chạy `npx tsc` để build ra mã js trong thư mục src, sau đó có thể chạy `npm start` (tương đương với `node dist/index.js`). Bạn có thể chạy riêng từng file js trong dist bằng lệnh, ví dụ `node dist/tea_factory_method.js`.
 
 ## Tham khảo
 

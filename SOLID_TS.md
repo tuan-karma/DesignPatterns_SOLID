@@ -323,7 +323,7 @@ Theo khái niệm đảo ngược phụ thuộc, các mô-đun mức cao không 
 Chú Bob tóm tắt quy tắc này trong bài báo "Các nguyên tắc thiết kế và các mẫu thiết kế" năm 2000 của mình như sau:
 "Nếu nguyên tắc đóng-mở (OCP) nêu mục tiêu của kiến trúc hướng đối tượng (OO), thì nguyên tắc đảo ngược phụ thuộc (DIP) chỉ ra cơ chế chính của mục tiêu này."
 
-Nói một cách đơn giản, cả mô-đun mức cao và mức thấp sẽ phụ thuộc vào sự trừu tượng hơn là mô-đụ cấp cao phụ thuộc vào mô-đun cấp thấp. Mọi phụ thuộc trong thiết kế nên được hướng về một lớp hoặc giao diện trừu tượng (abstract class/interface). Không nên có sự phụ thuộc nào vào một lớp cụ thể.
+Nói một cách đơn giản, cả mô-đun mức cao và mức thấp sẽ phụ thuộc vào sự trừu tượng hơn là mô-đun cấp cao phụ thuộc vào mô-đun cấp thấp. Mọi phụ thuộc trong thiết kế nên được hướng về một lớp hoặc giao diện trừu tượng (abstract class/interface). Không nên có sự phụ thuộc nào vào một lớp cụ thể.
 
 Xét ví dụ minh họa để làm rõ nguyên tắc này. Ví dụ một dịch vụ đặt hàng (order service). Trong ví dụ này, ta sử dụng lớp OrderService, lớp này ghi lại các đơn đặt hàng trong cơ sở dữ liệu. Lớp mức thấp ở bên dưới là MySQLDatabase đóng vai trò như sự phụ thuộc trực tiếp của lớp OrderService.
 
