@@ -1,5 +1,5 @@
 /**
- * Xem giải thích ví dụ trong file `../TS/singleton.ts`
+ * Xem giải thích ví dụ trong file `../TS/src/singleton.ts`
  */
 #include <iostream>
 
