@@ -1,6 +1,6 @@
 # Nguyên lý SOLID và ứng dụng vào mã TypeScript
 
-_Lược dịch và tuyển chọn bởi Nguyễn Anh Tuấn. Bài viết gốc: [Destiny Erhabor's Applying SOLID principles to TypeScript](https://blog.logrocket.com/applying-solid-principles-typescript/)_
+_Lược dịch từ: [Destiny Erhabor's Applying SOLID principles to TypeScript](https://blog.logrocket.com/applying-solid-principles-typescript/)_
 
 Được định nghĩa từ lâu, các nguyên tắc thiết kế SOLID nhằm cải thiện khả năng đọc, khả năng thích ứng, khả năng mở rộng và khả năng bảo trì của các thiết kế hướng đối tượng. Năm nguyên tắc thiết kế lớp hướng đối tượng (SOLID) tạo thuận lợi cho việc phát triển phầm mềm dễ hiểu, đã được kiểm chứng và có thể sử dụng với bất kỳ ngôn ngữ lập trình nào.
 

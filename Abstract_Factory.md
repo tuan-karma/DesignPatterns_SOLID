@@ -2,6 +2,8 @@
 
 _Dịch từ: https://refactoring.guru/design-patterns/abstract-factory_
 
+_Lưu ý_: mẫu này có thể coi là một dạng mở rộng của `Factory Method`, nên đọc về `Factory Method` trước.
+
 ## Mục đích
 
 Mẫu này thuộc nhóm "tạo tác" cho phép bạn tạo ra các họ các đối tượng liên quan tới nhau mà không cần xác định các lớp cụ thể. Lớp cụ thể (concrete classes) là lớp có mã triển khai định nghĩa tất cả các phương thức trong nó dùng để phân biệt với các lớp trừu tượng (chỉ khai báo các phương thức).
