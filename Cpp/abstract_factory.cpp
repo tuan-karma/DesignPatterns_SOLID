@@ -64,7 +64,7 @@ public:
 };
 
 // Concrete Factories: LightThemeFactory, DarkThemeFactory
-class LightThemeFactory : GUIFactory
+class LightThemeFactory : public GUIFactory
 {
 public:
     Button *createButton() override
@@ -77,7 +77,7 @@ public:
     }
 };
 
-class DarkThemeFactory : GUIFactory
+class DarkThemeFactory : public GUIFactory
 {
 public:
     Button *createButton() override
