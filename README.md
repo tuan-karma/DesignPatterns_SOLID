@@ -21,7 +21,7 @@
 
 Dưới đây liệt kê 9 mẫu thiết kế "được cho là" sử dụng rộng rãi trong phát triển phần mềm:
 
-- Singleton: Đảm bảo rằng một lớp chỉ có một thể hiện và cung cập một điểm truy xuất toàn cục (global) cho thể hiện đó. Hữu ích cho việc quản lý tài nguyên hoặc cấu hình được chia sẻ.
+- [Singleton](./TS/src/singleton.ts): Đảm bảo rằng một lớp chỉ có một thể hiện và cung cập một điểm truy xuất toàn cục (global) cho thể hiện đó. Hữu ích cho việc quản lý tài nguyên hoặc cấu hình được chia sẻ.
 - [Factory Method](./Factory_Method.md): Xác định một giao diện để tạo các đối tượng nhưng cho phép các lớp con quyết định lớp nào sẽ khởi tạo. Thúc đẩy việc nới lỏng kết nối (loose coupling) bằng cách ủy thác việc tạo ra đối tượng cho các lớp con.
 - [Abstract Factory](./Abstract_Factory.md): Cung cấp giao diện để tạo ra họ các đối tượng liên quan hoặc phụ thuộc. Đảm bảo rằng các đối tượng được tạo ra trong một họ là tương thích với nhau.
 - Builder: Tách việc xây dựng một đối tượng phức tạp khỏi biểu diễn của nó. Cho phép bạn thạo các biểu diễn của một đối tượng trong khi vẫn giữ cho quá trình xây dựng nhất quán.
