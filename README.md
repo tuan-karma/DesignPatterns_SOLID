@@ -31,7 +31,7 @@ Dưới đây liệt kê 9 mẫu thiết kế "được cho là" sử dụng r�
 - [Factory Method](./Factory_Method.md): Xác định một giao diện để tạo các đối tượng nhưng cho phép các lớp con quyết định lớp nào sẽ khởi tạo. Thúc đẩy việc nới lỏng kết nối (loose coupling) bằng cách ủy thác việc tạo ra đối tượng cho các lớp con.
 - [Abstract Factory](./Abstract_Factory.md): Cung cấp giao diện để tạo ra họ các đối tượng liên quan hoặc phụ thuộc. Đảm bảo rằng các đối tượng được tạo ra trong một họ là tương thích với nhau.
 - [Builder](./TS/src/builder.ts): Tách việc xây dựng một đối tượng phức tạp khỏi biểu diễn của nó. Cho phép bạn tạo các biểu diễn của một đối tượng trong khi vẫn giữ cho quá trình xây dựng nhất quán.
-- Prototype: Cho phép bạn nhân bản các đối tượng thay vị tạo ra chúng từ đầu.
+- Prototype: Cho phép bạn nhân bản các đối tượng thay vì tạo ra chúng từ đầu.
 - Adapter: Mẫu này giúp ta ghép nối các giao diện không tương thích với nhau.
 - Decorator: Thêm hành vi vào các đối tượng một cách linh động (dynamically). Mở rộng chức năng của các đối tượng mà không thay đổi cấu trúc của chúng.
 - Observer: Mẫu này thiết lập một mối quan hệ phụ thuộc giữa các đối tượng, cho phép chúng thông báo và phản ứng với những thay đổi trạng thái của nhau.
