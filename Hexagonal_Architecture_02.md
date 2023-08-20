@@ -33,7 +33,7 @@ Kiến trúc hình lục giác hay còn gọi là Cổng và Bộ điều hợp 
 
 Chúng ta có thể xem Cổng là một điểm vào bất khả tri về công nghệ, nó xác định giao diện cho phép các tác nhân nước ngoài giao tiếp với Ứng dụng, bất kể ai hoặc cái gì sẽ triển khai giao diện nói trên. Giống như cổng USB cho phép nhiều loại thiết bị giao tiếp với máy tính miễn là chúng có bộ điều hợp USB. Các cổng cũng cho phép Ứng dụng giao tiếp với các hệ thống hoặc dịch vụ bên ngoài, chẳng hạn như cơ sở dữ liệu, trình môi giới tin nhắn, các ứng dụng khác, v.v.
 
-> Bí quyết: Cổng (Ports) phải luôn có hai thứ được nối với nó, một trong hai luôn dùng để kết nối thử nghiệm
+> Bí quyết: Cổng (Ports) luôn có hai thứ được nối với nó, một trong hai luôn dùng để kết nối thử nghiệm
 
 ## Bộ điều hợp (Adapters)
 
