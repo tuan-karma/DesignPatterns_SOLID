@@ -105,6 +105,104 @@ Một điều cần nhấn mạnh là tất cả các lớp của **kiến trúc
 
 Trong ứng dụng giả tưởng này, bộ điều khiển sẽ là Bộ điều hợp lái (controller would be the Driving Adapter) cái mà đến lượt nó sẽ sử dụng Cổng lái.
 
+```TS
+/**
+ * Driving Adapter
+ * Location: src/user-interface/adapter/OrderAdapter.ts
+ */
+class OrderAdapter extends HttpRequestHandler {
+
+    private orderService: DrivingPort;
+
+    constructor(orderService: DrivingPort) {
+        super();
+        this.orderService = orderService;
+    }
+
+    public async createOrder(req: Request): Promise<Response> {
+        const createOrderCommand = new CreateOrderCommand(req);
+        const orderResult = await this.orderService.handle(createOrderCommand);
+
+        return this.createResponse(orderResult);
+    }
+}
+```
+
+Cổng lái sẽ là một giao diện trong lớp Ứng dụng, hay Hình lục giác.
+
+```TS
+/**
+ * Driving Port
+ * Location: src/domain/port/DrivingPort.ts
+ */
+interface DrivingPort {
+
+    handle(command: OrderCommand): Promise<boolean>;
+}
+```
+
+Dịch vụ Ứng dụng sẽ triển khai mã của Cổng Lái
+
+```TS
+/**
+ * Application service implementing Driving Port
+ * Location: src/application/service/OrderService.ts
+ */
+class OrderService implements DrivingPort {
+
+    private order: Order;
+    private orderRepository: DatabasePort;
+
+    constructor(orderRepository: DatabasePort) {
+        this.orderRepository = orderRepository;
+    }
+
+    public async handle(command: CreateOrderCommand): Promise<boolean> {
+        this.order = Order.create(command);
+
+        try {
+            return await this.orderRepository.save(this.order);
+        } catch (error) {
+            return false;
+        }
+    }
+}
+```
+
+Như bạn thấy, Dịch vụ Ứng dụng, là bộ phận điều phối, sẽ sử dụng Cổng bị lái.
+
+```TS
+/**
+ * Driven Port
+ * Location: src/domain/port/DatabasePort.ts
+ */
+interface DatabasePort {
+
+    save(aggregate: Aggregate): Promise<boolean>;
+}
+```
+
+Cuối cùng, cổng Bị lái sẽ được triển khai bởi Bộ điều hợp bị lái.
+
+```TS
+/**
+ * Order repository implementing Driven Port
+ * Location: src/infrastructure/repository/OrderRepositoryAdapter.ts
+ */
+class OrderRepositoryAdapter extends Repository implements DatabasePort {
+
+    public async save(order: Aggregate): Promise<boolean> {
+        return await this.insert(order)
+    }
+}
+```
+
+## Kết luận
+
+Kiến trúc hình lục giác hoặc cổng và bộ điều hợp, không phải là viên đạn bạc cho tất cả các ứng dụng. Khi app của bạn đạt một mức độ phức tạp nhất định, nếu được áp dụng cẩn thận sẽ mang lại lợi ích to lớn cho hệ thống của bạn. Nhưng nếu các "cửa sổ hỏng" ([Broken Windows Theory](https://www.techtarget.com/whatis/definition/broken-window-theory))được đưa vào, nó có thể gây ra nhiều vấn đề đau đầu.
+
+Khi được triển khai và kết hợp đúng cách với các phương pháp khác, như Thiết kế theo hướng miền, Cổng và Bộ điều hợp có thể đảm bảo tính ổn định và khả năng mở rộng lâu dài của ứng dụng, mang lại nhiều giá trị cho hệ thống và doanh nghiệp.
+
 ---
 
 ## Thêm vào
