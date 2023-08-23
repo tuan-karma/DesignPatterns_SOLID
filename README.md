@@ -20,8 +20,9 @@
 Để có cái nhìn tổng quát về thiết kế phần mềm (nên đọc theo thứ tự):
 
 - [5 nguyên tắc SOLID trong thiết kế phần mềm](./SOLID_TS.md)
-- [Kiến trúc lục giác - Sơ lược](./Hexagonal_Architecture.md)
-- [Kiến trúc lục giác - Bản chất và Cụ thể](./Hexagonal_Architecture_02.md)
+- [Kiến trúc lục giác 01 - Sơ lược](./Hexagonal_Architecture.md)
+- [Kiến trúc lục giác 02 - Bản chất và Cụ thể](./Hexagonal_Architecture_02.md)
+- [Kiến trúc lục giác 03 - Trong lập trình nhúng](./Hexagonal_Architecture_03_embedded.md)
 - [Đề xuất: Lộ trình học thiết kế và kiến trúc phần mềm](./Softwave_Design_Architecture_Roadmap.md)
 
 ## Các mẫu thiết kế
