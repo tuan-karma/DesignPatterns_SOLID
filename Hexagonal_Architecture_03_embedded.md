@@ -18,7 +18,7 @@ Là một phong cách kiến trúc nhằm tách rời logic nghiệp vụ lõi (
 
 Hãy xem xét một ví dụ về hệ thống giám sát nhiệt độ nhúng cho nhà thông minh. Hệ thống phải có khả năng đo nhiệt độ bằng các loại cảm biến khác nhau, chẳng hạn như cảm biến dựa trên I2C và cảm biến dựa trên UART. Nó cũng sẽ hỗ trợ các giao diện người dùng khác nhau, như màn hình LCD và bảng điều khiển chạy trên trình duyệt web.
 
-1. **Logic lõi (miền)**: Logic lõi của hệ thống giám sát nhiệt độ chứa các quy tắc kinh doanh cơ bản và tính toán liên quan đến đo nhiệt độ, kiểm tra ngưỡng, và cảnh báo. Nó nên được cách ly khỏi các loại cảm biến hoặc giao diện người dùng cụ thể. Đây là một đoạn mã đơn giản hóa của logic lõi:
+1. **Logic lõi (miền)**: Logic lõi của hệ thống giám sát nhiệt độ chứa các quy tắc hoạt động căn bản và tính toán liên quan đến đo nhiệt độ, kiểm tra ngưỡng, và cảnh báo. Nó nên được cách ly khỏi các loại cảm biến hoặc giao diện người dùng cụ thể. Đây là một đoạn mã đơn giản hóa của logic lõi:
 
 ```cpp
 // Core Logic - Temperature Monitor
@@ -82,7 +82,7 @@ void displayOnWebDashboard(float temp) {
 }
 ```
 
-4. Kết nối tất cả lại với nhau: Trong bước cuối cùng, ta kết nối **logic lõi** với các **bộ điều hợp** bằng cách sử dụng các **cổng** đã viết.
+4. **Kết nối các thành phần**: Trong bước cuối cùng, ta kết nối **logic lõi** với các **bộ điều hợp** bằng cách sử dụng các **cổng** đã viết.
 
 ```cpp
 // Wiring Core Logic with Adapters

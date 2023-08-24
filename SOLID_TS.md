@@ -320,7 +320,7 @@ class Cylinder implements AreaInterface, VolumeInterface {
 
 Theo khái niệm đảo ngược phụ thuộc, các mô-đun mức cao không nên phụ thuộc vào mô-đun cấp thấp (ở dưới). Thay vào đó, cả hai nên dựa vào cơ chế trừu tượng hóa (abstraction).
 
-Chú Bob tóm tắt quy tắc này trong bài báo "Các nguyên tắc thiết kế và các mẫu thiết kế" năm 2000 của mình như sau:
+Ông chú Bob tóm tắt quy tắc này trong bài báo "Các nguyên tắc thiết kế và các mẫu thiết kế" năm 2000 của mình như sau:
 "Nếu nguyên tắc đóng-mở (OCP) nêu mục tiêu của kiến trúc hướng đối tượng (OO), thì nguyên tắc đảo ngược phụ thuộc (DIP) chỉ ra cơ chế chính của mục tiêu này."
 
 Nói một cách đơn giản, cả mô-đun mức cao và mức thấp sẽ phụ thuộc vào sự trừu tượng hơn là mô-đun cấp cao phụ thuộc vào mô-đun cấp thấp. Mọi phụ thuộc trong thiết kế nên được hướng về một lớp hoặc giao diện trừu tượng (abstract class/interface). Không nên có sự phụ thuộc nào vào một lớp cụ thể.

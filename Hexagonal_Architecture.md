@@ -9,7 +9,7 @@ Kiến trúc lục giác là một mẫu kiến trúc phổ biến trong phát t
 
 ## Kiến trúc lục giác là gì?
 
-Tên gọi khác phản ánh bản chất của kiến trúc này hơn là "kiến trúc dựa trên các cổng và bộ điều hợp" (ports and adapters architecture). Nó bắt nguồn từ nghiên cứu của Alistair Cockburn năm 2005. Chúc ta đặt các lối vào, ra của ứng dụng ở rìa của hình lục giác. Điều này cho phép cách ly logic trung tâm của ứng dụng với thế giới bên ngoài (luôn biến động). Vì lối vào và lối ra ở rìa nên chúng ta có thể dễ dàng chuyển đổi các bộ xử lý mà không ảnh hưởng tới logic hoạt động cốt lõi của ứng dụng.
+Tên gọi khác phản ánh bản chất của kiến trúc này hơn là "kiến trúc dựa trên các cổng và bộ điều hợp" (ports and adapters architecture). Nó bắt nguồn từ nghiên cứu của Alistair Cockburn năm 2005. Chúng ta đặt các lối vào, ra của ứng dụng ở rìa của hình lục giác. Điều này cho phép **cách ly logic trung tâm** của ứng dụng với thế giới bên ngoài (luôn biến động). Vì lối vào và lối ra ở rìa nên chúng ta có thể dễ dàng thay đổi các mô-đun xử lý mà không ảnh hưởng tới logic hoạt động cốt lõi của ứng dụng.
 
 Mục đích của kiến trúc này nhằm tăng khả năng bảo trì của ứng dụng. Kiến trúc lục giác được thể hiện bằng một hình lục giác, mỗi cạnh khác nhau của hình này đại diện cho các cách giao tiếp với hệ thống bên ngoài. Ví dụ, chúng ta có thể giao tiếp qua các giao thức HTTP, REST API, SQL ... Mỗi lớp của hình lục giác độc lập với các lớp khác, vì vậy chúng ta có thể thực hiện các thay đổi riêng lẻ mà không ảnh hưởng tới toàn bộ hệ thống.
 
