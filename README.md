@@ -23,6 +23,7 @@
 - [Kiến trúc lục giác 01 - Sơ lược](./Hexagonal_Architecture.md)
 - [Kiến trúc lục giác 02 - Bản chất và Cụ thể](./Hexagonal_Architecture_02.md)
 - [Kiến trúc lục giác 03 - Trong lập trình nhúng](./Hexagonal_Architecture_03_embedded.md)
+- [Kiến trúc lục giác 04 - Phát triển hướng kiểm thử (TDD)](./Hexagonal_Architecture_04_TDD.md)
 - [Đề xuất: Lộ trình học thiết kế và kiến trúc phần mềm](./Softwave_Design_Architecture_Roadmap.md)
 
 ## Các mẫu thiết kế
