@@ -1,5 +1,5 @@
 /**
- * Prototype là mẫu thiết kế thuộc nhóm cấu trúc:
+ * Adapters là mẫu thiết kế thuộc nhóm cấu trúc:
  * - Cho phép các đối tượng có giao diện không tương thích hoạt động cùng nhau (ví dụ XML API <--> JSON API).
  * - Nó hoạt động như một cầu nối giữa hai giao diện không tương thích, làm cho chúng tương thích với nhau mà không cần thay đổi mã nguồn của chúng.
  * - Mẫu này hữu ích khi bạn muốn sử dụng lại mã hoặc giao diện hiện có với thư viện bên thứ 3 hoạt động với giao diện khác.
