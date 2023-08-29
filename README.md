@@ -38,10 +38,12 @@ Dưới đây liệt kê 9 mẫu thiết kế "được cho là" sử dụng r�
 - [Adapter](./TS/src/adapter.ts): Mẫu này giúp ta ghép nối các giao diện không tương thích với nhau.
 - [Decorator](./TS/src/decorator.ts): (Trang trí/Bọc phủ) Thêm hành vi vào các đối tượng một cách linh động (dynamically). Mở rộng chức năng của các đối tượng mà không thay đổi cấu trúc của chúng.
 - [Observer](./TS/src/observer.ts): Mẫu này thiết lập một mối quan hệ phụ thuộc giữa các đối tượng, cho phép chúng thông báo và phản ứng với những thay đổi trạng thái của nhau.
-- Strategy: Cho phép xác định một nhóm thuật toán, gói gọn chúng và làm cho chúng có thể hoán đổi cho nhau.
+- [Strategy](./TS/src/strategy.ts): Cho phép xác định một nhóm thuật toán, gói gọn chúng và làm cho chúng có thể hoán đổi cho nhau.
 
 ## Đọc thêm
 
 Các tài liệu tham khảo _có thể_ đọc thêm:
 
 - [Webapp design patterns in JS and React](https://www.patterns.dev/)
+
+## Lời kết
