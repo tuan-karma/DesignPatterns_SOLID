@@ -24,6 +24,7 @@
 - [Kiến trúc lục giác 02 - Bản chất và Cụ thể](./Hexagonal_Architecture_02.md)
 - [Kiến trúc lục giác 03 - Trong lập trình nhúng](./Hexagonal_Architecture_03_embedded.md)
 - [Kiến trúc lục giác 04 - Phát triển hướng kiểm thử (TDD)](./Hexagonal_Architecture_04_TDD.md)
+- [Kiến trúc lục giác 05 - Nguồn gốc thuật ngữ và So sánh với Clean, Onion, Microservice Architecture](./Hexagonal_Architecture_05_others.md)
 - [Đề xuất: Lộ trình học thiết kế và kiến trúc phần mềm](./Softwave_Design_Architecture_Roadmap.md)
 
 ## Các mẫu thiết kế
@@ -40,10 +41,30 @@ Dưới đây liệt kê 9 mẫu thiết kế "được cho là" sử dụng r�
 - [Observer](./TS/src/observer.ts): Mẫu này thiết lập một mối quan hệ phụ thuộc giữa các đối tượng, cho phép chúng thông báo và phản ứng với những thay đổi trạng thái của nhau.
 - [Strategy](./TS/src/strategy.ts): Cho phép xác định một nhóm thuật toán, gói gọn chúng và làm cho chúng có thể hoán đổi cho nhau.
 
+## Lời kết
+
+Các bài viết trên đây giúp ta nâng cao được kiến thức về phát triển phần mềm, có thể từ người viết mã (coder) đến nhà phát triển (developer) và có cái nhìn của một nhà thiết kế hệ thống (architecturer).
+
+Những người mới bắt đầu thường quan tâm tới ngôn ngữ, các từ khóa và quy tắc viết của ngôn ngữ (syntax), sau đó áp dụng vào giải các bài toán ngắn bằng tư duy thuật toán. Đến một mức nào đó ta sẽ thấy tư duy lập trình (giải các bài toán thực tế bằng máy tính) gần như không phụ thuộc vào ngôn ngữ sử dụng. Ngôn ngữ lập trình chỉ là một công cụ để giải quyết bài toán. Người lập trình cần có đủ hiểu biết để lựa chọn công cụ cho công việc, giống như việc ta hoàn toàn có thể dùng cái vặn vít để đóng đinh nhưng thực sự nếu bạn dùng cây búa để đóng đinh sẽ có kết quả ít sai hỏng và hiệu quả hơn. Phát triển phần mềm cũng vậy.
+
+Các nguyên tắc SOLID giống như một định hướng chung trong lập trình nó xuất phát từ kinh nghiệm thực tế, cho nên nó không có một lý do rõ ràng từ đầu. Việc chọn ra 5 nguyên tắc cũng là một lựa chọn mang tính kinh nghiệm, tên gọi của các nguyên tắc hay thứ tự trình bày tôi nghĩ cũng chỉ là một sự xắp xếp để gây ấn tượng và giúp dễ nhớ chứ không có lý do về logic.
+
+Các mẫu thiết kế cụ thể cũng là những "mẫu hình" xuất phát từ quan sát thực tế trong ngành phát triển phần mềm, đã được những nhà phát triển lâu năm đúc rút ra. Nó trở thành nguồn tham khảo và thành vốn từ vựng cho những người đi sau như chúng ta. Các mẫu thiết kế này cũng hướng tới các nguyên tắc chung của SOLID.
+
+Kiến trúc lục giác là một kiến trúc phần mềm khá hay. Các bạn nên đọc bài viết số 5 về kiến trúc lục giác để biết được lý do và tiến trình lịch sử của các loại kiến trúc phần mềm phổ biến hiện nay. Ban đầu mọi người hay đi từ kiến trúc phân lớp một cách khá tự nhiên, sau này do thực tế phát triển phần mềm kiến trúc phân lớp bộc lộ nhiều nhược điểm cần thay thế. Việc lựa chọn kiến trúc phần mềm là giai đoạn tiền thiết kế một giải pháp phần mềm lớn, nghĩa là nó diễn ra trước cả khi chọn các mẫu thiết kế và công nghệ cụ thể.
+
+Tất cả những điều kể trên, nguyên tắc SOLID, các mẫu thiết kế, và kiến trúc phần mềm đều có một mục tiêu chung cần hướng tới trong phát triển phần mềm là: khả năng bảo trì (sửa lỗi phát sinh), khả năng thích nghi với các thay đổi trong tương lai (do yêu cầu kinh doanh, do thay đổi cơ sở hạ tầng công nghệ, ...), khả năng kiểm thử tự động, và khả năng phát triển ở quy mô lớn (theo đội nhóm, nhiều người).
+
+Lưu ý: không phải lúc nào ta cũng buộc phải áp dụng những nguyên tắc thiết kế, những mẫu thiết kế, và kiến trúc lục giác. Tùy vào độ phức tạp của bài toán cần giải mà ta cần đưa ra quyết định phù hợp với yêu cầu bài toán và nguồn lực hiện có. Tránh việc "lạm dụng" (overuse) bất kỳ công cụ nào, nếu không ta sẽ trở thành người có cây búa trong tay và nhìn thấy bất kỳ thứ gì cũng muốn nghĩ nó là các cái đinh cần được đóng vào tường.
+
+Trong thư mục Cpp ở kho mã này có một dự án game đơn giản ("đoán số") để thử nghiệm cấu trúc một dự án theo kiến trúc lục giác. Các bạn có thể dựa trên cái khung bố cục đó mà thử phát triển thành một dự án đầy đủ, có phần kiểm thử tự động trên máy PC, sau đó port sang con chip vi điều khiển, sử dụng một vài nút bấm và màn LCD để thấy được sự hữu ích của kiến trúc này. Tôi sẽ để dự án chi tiết như này trên một repo riêng.
+
 ## Đọc thêm
 
-Các tài liệu tham khảo _có thể_ đọc thêm:
+Thật ra thì bất kỳ công việc liên quan tới tư đuy nào đều có gốc gác là tư duy _trừu tượng hóa_, từ việc nghiên cứu khoa học, toán học, phát triển phần mềm, hay tìm ra giải pháp trong quản lý. Tư duy _trừu tượng hóa_ là gì và tại sao nó lại là vũ khí mạnh nhất trong công cụ tư duy của con người?
+
+- [Trừu tượng hóa, một vũ khí bí mật](https://www.youtube.com/watch?v=FQYOpD7tv30)
+
+Những mẫu thiết kế thường áp dụng phổ biến trong ngạch phát triển ứng dụng web.
 
 - [Webapp design patterns in JS and React](https://www.patterns.dev/)
-
-## Lời kết
