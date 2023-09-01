@@ -1,3 +1,5 @@
+#include <memory>
+
 #include "ports/Display.h"
 #include "ports/Input.h"
 #include "ports/RandomGenerator.h"
@@ -8,16 +10,12 @@
 
 int main()
 {
-    Input *input = new KeyboardInput();
-    Display *display = new ConsoleDisplay();
-    RandomGenerator *randomGenerator = new StdRandomGenerator();
+    KeyboardInput input;
+    ConsoleDisplay display;
+    StdRandomGenerator randomGenerator;
 
     Game game(1, 10, input, display, randomGenerator);
     game.play();
-
-    delete randomGenerator;
-    delete display;
-    delete input;
 
     return 0;
 }
