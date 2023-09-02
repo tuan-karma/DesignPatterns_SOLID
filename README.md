@@ -65,6 +65,10 @@ Thật ra thì bất kỳ công việc liên quan tới tư đuy nào đều có
 
 - [Trừu tượng hóa, một vũ khí bí mật](https://www.youtube.com/watch?v=FQYOpD7tv30)
 
+Ít tài liệu trên mạng nói về nguyên lý SOLID trong C++, video sau ngắn gọn clear, có thể giúp ôn tập các kiến thức SOLID trong C++
+
+- [Dimitris Platis's How to write SOLID C++](https://platis.solutions/blog/2020/06/22/how-to-write-solid-cpp/)
+
 Những mẫu thiết kế thường áp dụng phổ biến trong ngạch phát triển ứng dụng web.
 
 - [Webapp design patterns in JS and React](https://www.patterns.dev/)
