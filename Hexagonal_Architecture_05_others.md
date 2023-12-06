@@ -137,7 +137,7 @@ Bằng cách sử dụng nguyên tắc đảo ngược phụ thuộc, chúng ta 
 
 ### Ánh xạ
 
-(Ví dụ phần này liên quan tới cơ sở dữ liệu và ánh xạ sơ đồ quan hệ, cùng với các kỹ thuật viết bộ điều hợp để thực hiện ánh xạ từ trong lõi ứng dụng tới lớp lưu trữ bên ngoài ...)
+(Ví dụ phần này liên quan tới cơ sở dữ liệu và ánh xạ sơ đồ quan hệ, cùng với các kỹ thuật viết bộ điều hợp để thực hiện ánh xạ từ trong lõi ứng dụng tới lớp lưu trữ bên ngoài ... Xin đọc trong bài viết gốc link ở đầu trang.)
 
 ### Kiểm thử
 
@@ -160,7 +160,7 @@ Sơ đồ sau đây cho thấy quá trình kiểm tra tích hợp tạo ra một
 
 _Kiến trúc lục giác: kiểm thử tích hợp cho bộ điều hợp REST_
 
-Sơ đồ bên trên hiển thị quá trình kiểm tra tích hợp cho bộ điều hợp cơ sở dữ liệu sử dụng TestContainers để khởi động cơ sở dữ liệu thử nghiệm (“Sắp xếp”), gọi một phương thức trên bộ điều hợp cơ sở dữ liệu (“Act”) và cuối cùng kiểm tra xem giá trị trả về của phương thức và , nếu có thể, những thay đổi trong cơ sở dữ liệu thử nghiệm sẽ đáp ứng mong đợi (“Khẳng định”):
+Sơ đồ dưới đây hiển thị quá trình kiểm tra tích hợp cho bộ điều hợp cơ sở dữ liệu sử dụng TestContainers để khởi động cơ sở dữ liệu thử nghiệm (“Sắp xếp/Arrange”), gọi một phương thức trên bộ điều hợp cơ sở dữ liệu (“Hành động/Act”) và cuối cùng kiểm tra xem giá trị trả về của phương thức và , nếu có thể, những thay đổi trong cơ sở dữ liệu thử nghiệm sẽ đáp ứng mong đợi (“Khẳng định/Assert”):
 
 ![Kiến trúc lục giác: kiểm thử tích hợp cho bộ điều hợp cơ sở dữ liệu](./images/Sven_Woltmann_Hexagon/hexagonal-architecture-integration-test-database-adapter-800x206.png)
 
@@ -170,15 +170,15 @@ Ngoài các thử nghiệm riêng biệt này, không nên thiếu các thử ng
 
 ### Tại sao lại là hình lục giác?
 
-Alistair Cockburn thường được hỏi liệu hình lục giác hay số “sáu” có ý nghĩa cụ thể nào không. Câu trả lời của anh cho câu hỏi này là: “Không”. Anh ấy muốn sử dụng một hình dạng mà trước đây chưa ai từng sử dụng. Hình vuông được sử dụng ở mọi nơi và hình ngũ giác rất khó vẽ. Vì vậy, nó đã trở thành một hình lục giác.
+Alistair Cockburn thường được hỏi liệu hình lục giác hay số “sáu” có ý nghĩa cụ thể nào không. Câu trả lời của ông cho câu hỏi này là: “Không”. Ông ấy muốn sử dụng một hình dạng mà trước đây chưa ai từng sử dụng. Hình vuông được sử dụng ở mọi nơi và hình ngũ giác rất khó vẽ. Vì vậy, nó đã trở thành một hình lục giác.
 
-Hình lục giác cũng rất phù hợp để vẽ hai cổng chính ở bên trái và hai cổng phụ ở bên phải. Cockburn cho biết anh chưa bao giờ gặp phải một dự án nào yêu cầu nhiều hơn bốn cổng để trình bày sơ đồ của nó.
+Hình lục giác cũng rất phù hợp để vẽ hai cổng chính ở bên trái và hai cổng phụ ở bên phải. Cockburn cho biết ông chưa bao giờ gặp phải một dự án nào cần nhiều hơn bốn cổng trong sơ đồ trình bày.
 
 ### Ưu điểm của kiến trúc lục giác
 
 - Khả năng sửa đổi mà không ảnh hưởng tới logic nghiệp vụ
 - Sự cách ly: lõi ứng dụng không bị chi phối bởi hạ tầng công nghệ, chỉ liên quan tới logic nghiệp vụ
-- Phát triển: sau khi định nghĩa được các **Cổng** (hay Trường hợp sử dụng) của ứng dụng, các công việc trên các thành phần riêng của thiết kế có thể được phân chia cho các thành viên trong đội/nhóm. Đây là cách phát triển từ trong lõi ra, hướng kiểm thử, cũng như hướng nghiệp vụ.
+- Phát triển: sau khi định nghĩa được các **Cổng** (hay Trường hợp sử dụng/Use-cases) của ứng dụng, các công việc trên các thành phần riêng của thiết kế có thể được phân chia cho các thành viên trong đội/nhóm. Đây là cách phát triển từ trong lõi ra, hướng kiểm thử, cũng như hướng nghiệp vụ.
 - Khả năng kiểm thử: như thấy ở trên, việc cách ly logic nghiệp vụ, và sử dụng cổng và các bộ điều hợp khiến cho việc kiểm thử từng thành phần và kiểm thử toàn bộ hệ thống có thể tự động hóa.
 
 ### Nhược điểm của kiến trúc lục giác

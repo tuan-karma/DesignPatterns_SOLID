@@ -85,7 +85,7 @@ Như đã đề cập, bên trái và bên phải của Hình lục giác là 2 
 
 Về phía Lái, Bộ điều hợp phụ thuộc vào (uses) Cổng, được Dịch vụ ứng dụng (Application Service) triển khai (implements), do đó Bộ điều hợp không biết ai sẽ hồi đáp các yêu cầu của nó, nó chỉ biết những phương thức khả dụng, do đó, nó phụ thuộc vào một sự trừu tượng hóa (Cổng).
 
-Về phía Bị Lái, Dịch vụ ứng dụng là dịch vụ phụ thuộc vào (uses) Cổng và Bộ điều hợp thì triển khai (implements) Giao diện của Cổng. Việc này nhằm đạt được đảo ngược phụ thuộc do bbộ điều hợp 'cấp thấp' (tức là kho lưu trữ cơ sở dữ liệu) buộc phải triển khai sự trừu tượng được xác định trong lõi của ứng dụng, đó là 'cấp độ cao hơn' (thông qua Bộ điều hợp).
+Về phía Bị Lái, Dịch vụ ứng dụng là dịch vụ phụ thuộc vào (uses) Cổng và Bộ điều hợp thì triển khai (implements) Giao diện của Cổng. Việc này nhằm đạt được đảo ngược phụ thuộc do bộ điều hợp 'cấp thấp' (tức là kho lưu trữ cơ sở dữ liệu) buộc phải triển khai sự trừu tượng được xác định trong lõi của ứng dụng, đó là 'cấp độ cao hơn' (thông qua Bộ điều hợp).
 
 ## Tại sao ta nên sử dụng Cổng và Bộ điều hợp?
 
@@ -99,7 +99,7 @@ Kiến trúc Cổng và Bộ điều hợp cũng hoạt động rất tốt vớ
 
 Trong phần này, ta sẽ xây dựng một phiên bản đơn giản hóa của dịch vụ xử lý các yêu cầu tạo đơn đặt hàng cho một dịch vụ thương mại điện tử.
 
-Lưu ý, ví dụ này bỏ qua một số chi tiết mà chỉ tập trung vào minh họa các khái niểm triển khai Cổng và Bộ điều hợp.
+Lưu ý, ví dụ này bỏ qua một số chi tiết mà chỉ tập trung vào minh họa các khái niệm triển khai Cổng và Bộ điều hợp.
 
 Một điều cần nhấn mạnh là tất cả các lớp của **kiến trúc Lớp** hướng miền _vẫn phù hợp_ khi cấu trúc một ứng dụng dựa trên Cổng và Bộ điều hợp, vì chúng cung cấp sự phân tách lý tưởng cho tất cả các thành phần của ứng dụng.
 
@@ -199,7 +199,7 @@ class OrderRepositoryAdapter extends Repository implements DatabasePort {
 
 ## Kết luận
 
-Kiến trúc hình lục giác hoặc cổng và bộ điều hợp, không phải là viên đạn bạc cho tất cả các ứng dụng. Khi app của bạn đạt một mức độ phức tạp nhất định, nếu được áp dụng cẩn thận sẽ mang lại lợi ích to lớn cho hệ thống của bạn. Nhưng nếu các "cửa sổ hỏng" ([Broken Windows Theory](https://www.techtarget.com/whatis/definition/broken-window-theory))được đưa vào, nó có thể gây ra nhiều vấn đề đau đầu.
+Kiến trúc hình lục giác hoặc cổng và bộ điều hợp, không phải là viên đạn bạc cho tất cả các ứng dụng. Khi app của bạn đạt một mức độ phức tạp nhất định, nếu được áp dụng cẩn thận sẽ mang lại lợi ích to lớn cho hệ thống của bạn. Nhưng nếu các "cửa sổ hỏng" ([Broken Windows Theory](https://www.techtarget.com/whatis/definition/broken-window-theory)) được đưa vào, nó có thể gây ra nhiều vấn đề đau đầu.
 
 Khi được triển khai và kết hợp đúng cách với các phương pháp khác, như Thiết kế theo hướng miền, Cổng và Bộ điều hợp có thể đảm bảo tính ổn định và khả năng mở rộng lâu dài của ứng dụng, mang lại nhiều giá trị cho hệ thống và doanh nghiệp.
 

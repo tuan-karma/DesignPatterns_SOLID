@@ -218,6 +218,6 @@ Như với bất kỳ giải pháp nào, kiến trúc hình lục giác cũng c�
 
 Ý tưởng chính của kiến trúc lục giác là tách logic nghiệp vụ khỏi các chi tiết kỹ thuật. Điều này được thực hiện bằng cách cô lập những mối quan tâm thông qua các giao diện.
 
-Ở một bên của ứng dụng, chúng tôi tạo các bộ điều hợp sử dụng giao diện ứng dụng. Ví dụ: đây có thể là các bộ điều khiển (controllers) ứng dụng. Ở phía bên kia của ứng dụng, chúng ta tạo các bộ điều hợp triển khai các giao diện ứng dụng. Ví dụ: đây có thể là các kho lưu trữ mà ứng dụng nhận được câu trả lời từ đó.
+Ở một bên của ứng dụng, chúng ta tạo các bộ điều hợp sử dụng giao diện ứng dụng. Ví dụ: đây có thể là các bộ điều khiển (controllers) ứng dụng. Ở phía bên kia của ứng dụng, chúng ta tạo các bộ điều hợp triển khai các giao diện ứng dụng. Ví dụ: đây có thể là các kho lưu trữ mà ứng dụng nhận được câu trả lời từ đó.
 
 Trong bài viết tiếp theo, chúng ta sẽ xem xét cách triển khai kiến trúc lục giác trong một ứng dụng sử dụng Spring Boot.
